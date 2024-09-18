@@ -65,8 +65,8 @@ public class ListaEncadeadaSimples<T> {
         return tamanho;
     }
 
-    @Override
-    public String toString() {
+
+    public String imprimir() {
         if (this.tamanho == 0) {
             return "[]";
         }

@@ -13,32 +13,32 @@ public class Program {
         // Adicionar primeiro número
 
         lista.inserirNoFim(1);
-        System.out.println(lista.toString());
+        System.out.println(lista.imprimir());
 
         // Adicionar segundo número
 
         lista.inserirNoFim(2);
-        System.out.println(lista.toString());
+        System.out.println(lista.imprimir());
 
         // Adicionar terceiro número
 
         lista.inserirNoFim(3);
-        System.out.println(lista.toString());
+        System.out.println(lista.imprimir());
 
         // Adicionar quarto número
 
         lista.inserirNoFim(4);
-        System.out.println(lista.toString());
+        System.out.println(lista.imprimir());
 
         // remover o segundo número
 
         lista.remover(4, 2);
-        System.out.println(lista.toString());
+        System.out.println(lista.imprimir());
 
         // inserir na primeira posição
 
         lista.inserirNoInicio(0);
-        System.out.println(lista.toString());
+        System.out.println(lista.imprimir());
 
         // Bucar uma posição
 
