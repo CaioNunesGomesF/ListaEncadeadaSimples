@@ -15,13 +15,14 @@ public class ListaEncadeadaSimples<T> {
         }
         this.ultimo = celula;
         this.tamanho++;
+        //
     }
 
     public void inserirNoInicio(T dado) {
-        if(this.tamanho == 0){
-            No<T> novoNo = new No<>(dado);
-            this.inicio = novoNo;
-            this.ultimo = novoNo;
+        if(this.tamanho == 0){ // 1
+            No<T> novoNo = new No<>(dado); // 1
+            this.inicio = novoNo; // 1
+            this.ultimo = novoNo; // 1
         }
         else{
             No<T> novoNo = new No<>(dado, this.inicio);
@@ -35,7 +36,7 @@ public class ListaEncadeadaSimples<T> {
     public void remover(T dado, T dadoRemover) {
         No<T> atual = this.inicio;
         while (atual.getProximo() != null) {
-            if (atual.getProximo().getElemento().equals(dadoRemover)) {
+            if (atual.getProximo().getDados().equals(dadoRemover)) {
                 atual.setProximo(atual.getProximo().getProximo());
                 this.tamanho--;
                 if (atual.getProximo() == null) {
@@ -50,7 +51,7 @@ public class ListaEncadeadaSimples<T> {
     public boolean buscar(T dado, T dadoBucar) {
         No<T> busca = this.inicio;
         while (busca.getProximo() != null) {
-            if (busca.getProximo().getElemento().equals(dadoBucar)) {
+            if (busca.getProximo().getDados().equals(dadoBucar)) {
                 return true;
             } else {
                 busca.setProximo(busca.getProximo().getProximo());
@@ -76,7 +77,7 @@ public class ListaEncadeadaSimples<T> {
 
         No<T> atual = this.inicio;
         while (atual != null) {
-            builder.append(atual.getElemento());
+            builder.append(atual.getDados());
             if (atual.getProximo() != null) {
                 builder.append(", ");
             }

@@ -2,27 +2,27 @@ package entities;
 
 public class No<T> {
 
-    private T elemento;
+    private T dados;
     private No<T> proximo;
 
     public No(){
 
     }
-    public No(T elemento) {
-        this.elemento = elemento;
+    public No(T dados) {
+        this.dados = dados;
         this.proximo = null;
     }
     public No(T dado, No<T> proximo) {
-        this.elemento = dado;
+        this.dados = dado;
         this.proximo = proximo;
     }
 
-    public T getElemento() {
-        return elemento;
+    public T getDados() {
+        return dados;
     }
 
     public void setDado(T Dado) {
-        this.elemento = Dado;
+        this.dados = Dado;
     }
 
     public No<T> getProximo() {
@@ -36,7 +36,7 @@ public class No<T> {
     @Override
     public String toString() {
         return "No{" +
-                "elemento=" + elemento +
+                "dado =" + dados +
                 ", proximo=" + proximo +
                 '}';
     }
